@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 //Components
+import '../actions/auth/auth_service.dart';
 import '../components/custom_button.dart';
 import '../components/custom_text_field.dart';
 
@@ -20,8 +22,19 @@ class _RegisterPageState extends State<RegisterPage> {
   final passwordController = TextEditingController();
 
   //SignUp User Functionality Service
-  void SignUp() {
-
+  void SignUp() async{
+    // get the auth service
+    final authService = Provider.of<AuthService>(context , listen:false);
+    try{
+      await authService.signUpWithEmailandPassword(
+        emailController.text, passwordController.text
+        );
+    }catch(e){
+      // any error occur we going to show by SnackBar 
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(e.toString()))
+      );
+    }
   }
 
 

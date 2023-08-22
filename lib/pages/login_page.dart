@@ -1,4 +1,6 @@
+import 'package:chatting_app_firebase/actions/auth/auth_service.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 //Components
 import '../components/custom_button.dart';
@@ -18,9 +20,20 @@ class _LoginPageState extends State<LoginPage> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   
-  //SignUp User Functionality Service
-  void SignIn() {
-
+  //SignIn User Functionality Service
+  void SignIn() async{
+    // get the auth service
+    final authService = Provider.of<AuthService>(context , listen:false);
+    try{
+      await authService.signInWithEmailandPassword(
+        emailController.text, passwordController.text
+        );
+    }catch(e){
+      // any error occur we going to show by SnackBar 
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(e.toString()))
+      );
+    }
   }
 
 

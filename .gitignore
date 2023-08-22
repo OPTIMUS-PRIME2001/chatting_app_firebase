@@ -42,3 +42,7 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+#environments and secrets
+*.env
+lib/firebase_options.dart
