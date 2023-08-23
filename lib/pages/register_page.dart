@@ -64,7 +64,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 
                 //Welcome Message
                 const Text(
-                  "Welcome Back You\'ve been missed",
+                  "Welcome Back You've been missed",
                   style: TextStyle(
                     fontSize: 16,
                     color: Colors.black,
