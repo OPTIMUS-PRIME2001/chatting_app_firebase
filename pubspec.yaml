@@ -37,9 +37,8 @@ dependencies:
   ionicons: ^0.2.2
   firebase_auth: ^4.7.3
   firebase_core: ^2.15.1
-  provider:
-  flutter_dotenv: ^5.1.0
   cloud_firestore: ^4.8.5
+  provider:
 
 dev_dependencies:
   flutter_test:

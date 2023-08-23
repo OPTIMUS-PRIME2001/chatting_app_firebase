@@ -61,8 +61,8 @@ class _HomePageState extends State<HomePage> {
           }
           //Loading
           if(snapshot.connectionState == ConnectionState.waiting){
-            return const Center(child : CircularProgressIndicator());
-            // return const Text('Loading..');
+            // return const Center(child : CircularProgressIndicator());
+            return const Text('Loading..');
           }
 
           //List all User

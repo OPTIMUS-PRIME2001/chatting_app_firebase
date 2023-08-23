@@ -19,7 +19,7 @@ class AuthService extends ChangeNotifier{
           );
 
           //add new document for user in users collection if doesn't exist in case of signIn
-          _fireStore.collection('user').doc(userCredential.user!.uid).set({
+          _fireStore.collection('users').doc(userCredential.user!.uid).set({
             'uid': userCredential.user!.uid,
             'email':email,
             'emailVerified':userCredential.user!.emailVerified,
