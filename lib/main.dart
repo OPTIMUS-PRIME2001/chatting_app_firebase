@@ -7,7 +7,6 @@ import 'package:provider/provider.dart';
 // service / actions files
 import 'package:chatting_app_firebase/actions/auth/auth_route.dart';
 import 'package:chatting_app_firebase/actions/auth/auth_service.dart';
-import 'actions/login_or_register.dart';
 
 // components
 // import 'pages/login_page.dart';
